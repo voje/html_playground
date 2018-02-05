@@ -1,33 +1,18 @@
 $(document).ready(function() {
+    console.log("rdy")
     $("#entry-div")
-        .mouseenter(lights_on)
-        .mouseleave(lights_off);
+        .mouseover(lights_on)
+        .mouseout(lights_off);
 })
-
-var delay = 2000;
 
 function lights_on() {
     console.log("on");
-    $("#entry-div").animate({
-        color: "#ec9341" 
-    }, delay);
-    $("#bg-eyes").animate({
-        opacity: 100
-    }, delay);
-    setTimeout(function() {
-        $("#bg-inv").css({opacity: 100})
-    }, 4000)
+    $("#eyes").toggleClass("transparent");
+    $("#entry-div").css({color: "#ec9341"});
 }
 
 function lights_off() {
     console.log("off");
-    $("#entry-div").animate({
-        color: "#46abb5" 
-    }, delay);
-    $("#bg-eyes").animate({
-        opacity: 0
-    }, delay);
-    $("#bg-inv").animate({
-        opacity: 0
-    }, delay);
+    $("#eyes").toggleClass("transparent");
+    $("#entry-div").css({color: "#46abb5"});
 }

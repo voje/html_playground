@@ -1,60 +1,63 @@
 html {
+    margin: 0 auto;
     height: 100%;
     width: 100%;
 }
 
 body {
-    margin: 0px;
+    margin: 0 auto;
     height: 100%;
     width: 100%;
+    background-color: black;
 }
 
-#bg-normal {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-size: 100%;
-    background: no-repeat center;
+#bottom {
     background-image: url("cthulhu.jpg");
 }
 
-#bg-eyes {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-size: 100%;
-    background: no-repeat center;
+#eyes {
     background-image: url("cthulhu_eyes.jpg");
+}
+
+.transparent {
     opacity: 0;
 }
 
-#bg-inv {
+.bg-img {
     position: absolute;
-    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+.vertical-anchor {
+    position: absolute;
+    top: 50%;
     width: 100%;
-    background-size: 100%;
-    background: no-repeat center;
-    background-image: url("cthulhu_inv.jpg");
-    opacity: 0;
+    transform: translateY(-20px);
+    text-align: center;
 }
 
 #entry-div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-40px, -20px);
-    text-align: center;
-    
     display: inline-block;
-    border: 3px solid;
-    border-radius: 15px;
+    cursor: pointer;
+
+    border: 2px solid;
+    border-radius: 10px;
     padding: 5px;
     
-    opacity: 100;
-    cursor: pointer;
-    color: #46abb5;
+    -webkit-transition: color 1s ease-in-out;
+    -moz-transition: color 1s ease-in-out;
+    -o-transition: color 1s ease-in-out;
+    transition: color 1s ease-in-out;
 }
 
 /* colors

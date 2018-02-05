@@ -48,6 +48,7 @@ body {
 
 #entry-div {
     display: inline-block;
+    color: "#46abb5";
     cursor: pointer;
 
     border: 2px solid;

@@ -9,39 +9,55 @@ body {
     width: 100%;
 }
 
-#canvas {
+#bg-normal {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
-    /*background: linear-gradient(blue, black);*/
+    width: 100%;
     background-size: 100%;
     background: no-repeat center;
     background-image: url("cthulhu.jpg");
 }
 
-#vertical-anchor {
+#bg-eyes {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+    background: no-repeat center;
+    background-image: url("cthulhu_eyes.jpg");
+    opacity: 0;
+}
+
+#bg-inv {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+    background: no-repeat center;
+    background-image: url("cthulhu_inv.jpg");
+    opacity: 0;
+}
+
+#entry-div {
     position: absolute;
     top: 50%;
-    transform: translateY(-20px);
-    width: 100%;
+    left: 50%;
+    transform: translate(-40px, -20px);
     text-align: center;
-}
-
-#entry-div {
-    cursor: pointer;
-    color: aqua;
-    transition: color 2s ease-out;
-}
-
-#entry-div:hover {
-    color: orange;
-}
-
-#entry-div {
+    
     display: inline-block;
     border: 3px solid;
     border-radius: 15px;
     padding: 5px;
+    
+    opacity: 100;
+    cursor: pointer;
+    color: #46abb5;
 }
 
-#entry-txt {
-
-}
+/* colors
+	blue: 	1d2824 46abb5 62daf7 304e4e
+	orange:	febb2e f59d31 ec9341 cc7e29		
+*/

@@ -28,7 +28,7 @@ body {
 #entry-div {
     cursor: pointer;
     color: aqua;
-    transition: color 2s ease-out; /* delays for 1 second */
+    transition: color 2s ease-out;
 }
 
 #entry-div:hover {
